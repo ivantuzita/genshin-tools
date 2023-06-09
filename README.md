@@ -1,5 +1,6 @@
 # GenshinTools
 
+An Angular web-app to help with your daily Genshin Tasks.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server
