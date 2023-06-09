@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+b, h5, .card-text, p, button, h1{
+  font-family: 'Arvo', serif;
+}
+
+.navbar { margin : 0 !important; }
+
+.tiny{
+  width: 10%;
+  padding-bottom: 2%;
+}
