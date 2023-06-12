@@ -2,6 +2,8 @@ import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'
 import { Router } from '@angular/router'
+import { BehaviorSubject } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +13,9 @@ import { Router } from '@angular/router'
 export class LoginComponent implements OnInit{
 
   loginForm!: FormGroup;
+  LoginStatus = new BehaviorSubject<boolean | null>(null);
 
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {
-
-  }
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private cookieService: CookieService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -29,6 +30,9 @@ export class LoginComponent implements OnInit{
         .subscribe({
           next:(res=>{
             alert(res.message);
+            alert(res.userId);
+            localStorage.setItem('loggedUser', res.userId);
+            localStorage.setItem('username', res.username)
             this.loginForm.reset();
             this.router.navigate(['']);
           }),

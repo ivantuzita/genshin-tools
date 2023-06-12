@@ -1,1 +1,0 @@
-let day = Date.prototype.getDay();
