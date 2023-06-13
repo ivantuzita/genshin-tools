@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Weapon } from './../../../../interfaces/weapon';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-weapon-card',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./weapon-card.component.css']
 })
 export class WeaponCardComponent {
+
+  @Input() weapon: Weapon = {
+    id: 0,
+    name: '',
+    pictureURL: ''
+  }
 
 }

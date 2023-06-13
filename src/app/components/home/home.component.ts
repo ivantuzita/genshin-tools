@@ -1,4 +1,3 @@
-import { WeekDay } from '@angular/common';
 import { FetcherService } from './../../services/fetcher.service';
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../../interfaces/character';

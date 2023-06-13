@@ -16,7 +16,6 @@ export class TalentListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('loggedUser'))
     this.fetcherService.getUserCharacters(localStorage.getItem('loggedUser')).subscribe((characterList) =>{
       this.characterList = characterList;
     })

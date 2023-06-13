@@ -6,7 +6,7 @@ import {HttpClient} from "@angular/common/http"
 })
 export class FetcherService {
 
-  private baseUrl:string = "https://localhost:7093/api/Dashboard/"
+  private baseUrl:string = "https://localhost:7093/api/dashboard/"
   constructor(private http : HttpClient) { }
 
   getUserCharacters(id:any){

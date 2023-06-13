@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit{
         .subscribe({
           next:(res=>{
             alert(res.message);
-            alert(res.userId);
             localStorage.setItem('loggedUser', res.userId);
             localStorage.setItem('username', res.username)
             this.loginForm.reset();

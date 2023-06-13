@@ -1,18 +1,12 @@
 <div class="card">
   <div class="card-header text-center">
-    <h2><b>Weapons Upgrades</b></h2>
+    <h2><b>Weapon Upgrades</b></h2>
   </div>
   <div class="card-body">
     <h5 class="card-title text-center">Weapons to level up:</h5>
     <div class="row">
-      <div class="col-4">
-        <app-weapon-card></app-weapon-card>
-      </div>
-      <div class="col-4">
-        <app-weapon-card></app-weapon-card>
-      </div>
-      <div class="col-4">
-        <app-weapon-card></app-weapon-card>
+      <div class="col-4 g-4" *ngFor="let weapon of weaponList">
+        <app-weapon-card [weapon]="weapon"></app-weapon-card>
       </div>
     </div>
   </div>

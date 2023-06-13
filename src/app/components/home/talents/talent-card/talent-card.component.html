@@ -2,6 +2,25 @@
   <img src="{{character.pictureURL}}" class="card-img-top border center" alt="...">
   <div class="card-body text-center bg-secondary-subtle">
     <p>{{character.name}}</p>
-    <button type="button" class="btn btn-success"><img class="tiny" src="../../../../assets/done.svg"> Done</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="tiny" src="../../../../assets/done.svg"> Done</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Talent Upgrade for {{character.name}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you're done?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Nevermind</button>
+        <button type="button" class="btn btn-success">Yes, I'm sure.</button>
+      </div>
+    </div>
   </div>
 </div>

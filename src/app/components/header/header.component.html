@@ -1,18 +1,15 @@
-<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-  <div class="bg-dark p-4">
-    <h5 class="text-body-emphasis h4">Collapsed content</h5>
-    <span class="text-body-secondary">Toggleable via the navbar brand.</span>
-  </div>
-</div>
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" routerLink="">
-      <img src="../../assets/paimon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-      <b> GenshinTools</b>
-    </a>
+  <form class="justify-content-start">
+    <button routerLink="/login" class="btn btn-outline-success me-2" type="button">Login</button>
+    <button routerLink="/signup" class="btn btn-sm btn-outline-secondary" type="button">Sign Up</button>
+  </form>
+    <div class="d-flex">
+      <a class="navbar-brand" routerLink="/">
+        <img src="../../assets/paimon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        <b> GenshinTools</b>
+      </a>
+    </div>
   </div>
 </nav>
 
